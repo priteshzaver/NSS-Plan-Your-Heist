@@ -14,5 +14,9 @@ namespace PlanYourHeist
             SkillLevel = skillLevel;
             CourageFactor = courageFactor;
         }
+        public string Stringify()
+        {
+            return $"Name: {Name} / Skill Level: {SkillLevel} / Courage Factor: {CourageFactor}";
+        }
     }
 }
