@@ -34,9 +34,14 @@ namespace PlanYourHeist
 
             }
             int bankDifficulty = 100;
+            
+            Random random = new Random();
+            int teamLuck = random.Next(-10, 11);
+            bankDifficulty += teamLuck;
+
             int totalSkill = team.Sum(each => each.Value.SkillLevel);
             Console.WriteLine($"Team Skill: {totalSkill}");
-
+            Console.WriteLine($"Bank Difficulty: {bankDifficulty}");
             if (totalSkill >= bankDifficulty)
             {
                 Console.WriteLine("You have successfully broken in and stolen some shit!");
